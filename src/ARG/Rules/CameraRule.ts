@@ -8,6 +8,8 @@ const tickFunction = () => {
     player.getDynamicProperty("cameraSeconds") ??
       player.setDynamicProperty("cameraSeconds", 0);
     const block = player.getBlockFromViewDirection();
+
+    if (!block) return;
     //world.sendMessage(`Block Type: ${block.block.type.id}`);
     if (block.block.typeId.includes("cobblestone_wall")) {
       player.setDynamicProperty(

@@ -1,4 +1,4 @@
-import { Player, world } from "@minecraft/server";
+import { Player, system, world } from "@minecraft/server";
 import { GlobalVars } from "globalVars";
 import { TickFunctions } from "staticScripts/tickFunctions";
 
@@ -18,9 +18,11 @@ world.afterEvents.playerSpawn.subscribe((eventData) => {
 
 export class BannedManager {
   static banPlayer = (player: Player) => {
-    player.addTag("banned");
-    world.sendMessage(`${player.name} has been banned from the server`);
-    //player.dimension.runCommand(`kick ${player.name}`);
+    system.run(() => {
+      player.addTag("banned");
+      world.sendMessage(`${player.name} has been banned from the server`);
+      //player.dimension.runCommand(`kick ${player.name}`);
+    });
   };
 
   static banTimers: Map<Player, number> = new Map();

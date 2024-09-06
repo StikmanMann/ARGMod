@@ -1,5 +1,5 @@
 var _a;
-import { world } from "@minecraft/server";
+import { system, world } from "@minecraft/server";
 import { GlobalVars } from "globalVars";
 import { TickFunctions } from "staticScripts/tickFunctions";
 const activeBan = false;
@@ -19,9 +19,11 @@ export class BannedManager {
 }
 _a = BannedManager;
 BannedManager.banPlayer = (player) => {
-    player.addTag("banned");
-    world.sendMessage(`${player.name} has been banned from the server`);
-    //player.dimension.runCommand(`kick ${player.name}`);
+    system.run(() => {
+        player.addTag("banned");
+        world.sendMessage(`${player.name} has been banned from the server`);
+        //player.dimension.runCommand(`kick ${player.name}`);
+    });
 };
 BannedManager.banTimers = new Map();
 BannedManager.queueBan = (player, Seconds) => {
