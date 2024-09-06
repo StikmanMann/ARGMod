@@ -1,3 +1,4 @@
+import { world } from "@minecraft/server";
 /**
 //Pre load
     //Map Data
@@ -29,9 +30,12 @@ import "./MapParser/loadMap"
 //Preload Settings
 //import "ChaosMod/ChaosEventSettings";
 //ChaosManager
-import "ChaosMod/ChaosEventManager";
+//import "ChaosMod/ChaosEventManager";
+import { Logger } from "staticScripts/Logger";
+Logger.warn("ARG script running!", "ARG Mod");
+world.sendMessage("ARG Mod Loaded");
+import "./ARG/RulesManager";
+import "./ARG/BannedManager";
 //Better Chat
 import "betterChat";
-import { Logger } from "staticScripts/Logger";
-Logger.warn("Chaos script running! Laso this is all aliveJy's fault", "ChaosMod");
 //import "Ollama/mainOllama";

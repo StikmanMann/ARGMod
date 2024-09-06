@@ -3,14 +3,14 @@
   "metadata": {
     "authors": ["StikmanMann", "CoderReal", "AliveJy", "HU0", "Jumper2006"],
     "generated_with": {
-      "blockbench_item_wizard": ["1.0.2"]
+      "blockbench_item_wizard": ["1.0.0"]
     }
   },
   "header": {
-    "name": "ChaosMod",
+    "name": "ARG Mod",
     "description": "Mod by StikmanMann, CoderReal, (AliveJy, HU0) and Jumper2006",
     "min_engine_version": [1, 19, 50],
-    "uuid": "293224d2-3f75-4558-8260-a814979f0a96",
+    "uuid": "27c90aa7-d4bb-477c-b48b-d3d3fe7ec3b6",
     "version": [1, 0, 1]
   },
   "modules": [

@@ -33,13 +33,18 @@ import "./MapParser/loadMap"
 //import "ChaosMod/ChaosEventSettings";
 
 //ChaosManager
-import "ChaosMod/ChaosEventManager";
-
-//Better Chat
-import "betterChat";
+//import "ChaosMod/ChaosEventManager";
 
 import { Logger } from "staticScripts/Logger";
 
-Logger.warn("Chaos script running!", "ChaosMod");
+Logger.warn("ARG script running!", "ARG Mod");
+
+world.sendMessage("ARG Mod Loaded");
+
+import "./ARG/RulesManager";
+import "./ARG/BannedManager";
+
+//Better Chat
+import "betterChat";
 
 //import "Ollama/mainOllama";
